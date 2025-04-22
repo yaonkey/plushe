@@ -2,13 +2,24 @@
   "name": "plushe-modal",
   "version": "1.0.1",
   "description": "A lightweight modal library with customizable options.",
-  "main": "src/index.js",
+  "main": "dist/index.min.js",
+  "module": "dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "echo 'No build step required'",
-    "test": "echo 'No tests yet'"
+    "build": "babel src --out-dir dist --copy-files && terser dist/index.js -o dist/index.min.js"
   },
-  "keywords": ["modal", "library", "javascript", "ui"],
+  "keywords": [
+    "modal",
+    "library",
+    "javascript",
+    "ui"
+  ],
   "author": "Yaonkey",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "terser": "^5.39.0"
+  }
 }

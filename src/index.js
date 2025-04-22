@@ -1,5 +1,3 @@
-import modalData from "./data/modals.json" with { type: "json" };
-
 class Modal {
   constructor(id, title, content, options = {}, animationDuration) {
     this.id = id;
@@ -111,7 +109,13 @@ class ModalFactory {
   }
 
   createModal(id, title, content, options) {
-    const modal = new Modal(id, title, content, options, this.animationDuration);
+    const modal = new Modal(
+      id,
+      title,
+      content,
+      options,
+      this.animationDuration
+    );
     this.modals.push(modal);
   }
 
@@ -136,6 +140,3 @@ class ModalFactory {
     });
   }
 }
-
-// Создаём фабрику модалок с данными из modals.json
-const modalFactory = new ModalFactory(modalData);
