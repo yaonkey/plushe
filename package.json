@@ -1,0 +1,14 @@
+{
+  "name": "plushe-modal",
+  "version": "1.0.1",
+  "description": "A lightweight modal library with customizable options.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "test": "echo 'No tests yet'"
+  },
+  "keywords": ["modal", "library", "javascript", "ui"],
+  "author": "Yaonkey",
+  "license": "MIT"
+}
